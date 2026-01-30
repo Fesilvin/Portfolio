@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Ева Эрглис — Портфолио</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Ева Эрглис</h1>
+        <p>Начинающий разработчик | Знакома с C++ (Qt), Java, Python и HTML/CSS</p>
+        <img src="avatar.jpg" alt="Ева Эрглис" class="avatar">
+    </header>
+
+    <section class="skills">
+        <h2>Навыки</h2>
+        <ul>
+            <li>C++ / Qt</li>
+            <li>Java</li>
+            <li>Python</li>
+            <li>HTML/CSS</li>
+        </ul>
+        <p>Изучаю программирование и продолжаю развивать навыки в этих технологиях.</p>
+    </section>
+
+
+    <section class="skills">
+        <h2>Навыки</h2>
+        <ul>
+            <li>C++</li>
+            <li>Qt</li>
+            <li>Visual Studio</li>
+            <li>HTML/CSS</li>
+            <li>Git</li>
+        </ul>
+    </section>
+
+    <section class="about">
+        <h2>Обо мне</h2>
+        <p>
+            Я студент III курса Технологического института, изучаю программирование и активно развиваю навыки в C++, Java, Python и веб-технологиях.
+            Пока создаю небольшие проекты для практики и планирую пополнять портфолио на GitHub.
+        </p>
+    </section>
+
+    <section class="projects">
+        <h2>Проекты</h2>
+        <div class="card">
+            <h3>Курсовая работа на Qt</h3>
+            <p>Приложение с графическим интерфейсом для обработки данных.</p>
+        </div>
+    </section>
+
+    <section class="contacts">
+        <h2>Контакты</h2>
+        <a href="mailto:fesilvin@mail.ru" class="contact-btn">Email</a>
+        <a href="https://github.com/Fesilvin" class="contact-btn" target="_blank">GitHub</a>
+    </section>
+
+
+    <footer>
+        <p>© 2026 Ева Эрглис</p>
+    </footer>
+
+    <script>
+        const sections = document.querySelectorAll('section');
+        window.addEventListener('scroll', checkSections);
+
+        function checkSections() {
+            const triggerBottom = window.innerHeight / 5 * 4;
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                if (sectionTop < triggerBottom) {
+                    section.classList.add('visible');
+                }
+            });
+        }
+
+        // запускаем один раз при загрузке
+        checkSections();
+    </script>
+
+    <script>
+        const sections = document.querySelectorAll('section');
+
+        function checkSections() {
+            const triggerBottom = window.innerHeight / 5 * 4;
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                if (sectionTop < triggerBottom) {
+                    section.classList.add('visible');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', checkSections);
+
+        // запуск один раз при загрузке
+        checkSections();
+    </script>
+
+</body>
+</html>
