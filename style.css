@@ -1,0 +1,224 @@
+﻿/* Общие настройки */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+header {
+    background: linear-gradient(135deg, #6b6b6b, #4a4a4a);
+    color: #fff;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+    header h1 {
+        margin: 0;
+        font-size: 2.8rem;
+        font-weight: 600;
+    }
+
+    header p {
+        margin-top: 12px;
+        font-size: 1.2rem;
+        color: #ddd;
+    }
+
+/* Фото аватар */
+.avatar {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    margin-top: 20px;
+    object-fit: cover;
+    border: 3px solid #fff;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Секция навыков */
+    .skills ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .skills li {
+        background: #e0e0e0;
+        padding: 12px 18px;
+        border-radius: 14px;
+        transition: background 0.3s, transform 0.2s;
+        cursor: default;
+    }
+
+        .skills li:hover {
+            background: #cfcfcf;
+            transform: translateY(-2px);
+        }
+
+    .skills p {
+        margin-top: 14px;
+        font-size: 1rem;
+        color: #333;
+    }
+
+    .about h2 {
+        font-size: 1.8rem;
+        margin-bottom: 16px;
+        border-bottom: 2px solid #eee;
+        padding-bottom: 8px;
+        color: #444;
+    }
+
+    .about p {
+        font-size: 1rem;
+        color: #333;
+        line-height: 1.6;
+    }
+
+/* Анимация появления секций */
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out,
+                transform 0.6s ease-out;
+}
+
+/* Анимация появления секций при скролле */
+
+    section.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    color: #444;
+}
+
+/* Список навыков */
+ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+li {
+    background: #e0e0e0; /* серый */
+    padding: 10px 15px;
+    border-radius: 12px;
+    transition: 0.3s;
+    cursor: default;
+}
+
+    li:hover {
+        background: #cfcfcf; /* чуть темнее при наведении */
+    }
+
+
+/* Карточки проектов */
+.card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    margin-bottom: 20px;
+}
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    }
+
+/* Контакты */
+section {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.skills,
+.about,
+.projects,
+.contacts {
+    max-width: 900px;
+    margin: auto;
+}
+
+.contacts {
+    text-align: center;
+}
+
+.contact-btn {
+    display: inline-block;
+    background: #4a4a4a;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 12px;
+    margin: 10px 12px;
+    text-decoration: none;
+}
+
+.contact-btn:hover {
+    background: #6b6b6b;
+}
+
+
+/* Подвал */
+footer {
+    background: #4a4a4a; /* темно-серый */
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Адаптив для мобильных */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}
+
+nav {
+    text-align: center;
+    padding: 15px;
+    background: #c9c9c9;
+}
+
+nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #4a4a4a;
+}
+
+nav a:hover {
+    color: #000;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.contacts-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}

@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Ева Эрглис — Портфолио</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Ева Эрглис</h1>
+        <p>Начинающий аналитик | C++ / Qt, JavaScript, Python, SQL и HTML/CSS</p>
+        <img src="avatar.jpg" alt="Ева Эрглис" class="avatar">
+        <a href="contacts.html" class="contact-btn">Связаться со мной</a>
+    </header>
+
+    <section class="skills">
+        <h2>Навыки</h2>
+        <ul>
+            <li>C++ / Qt</li>
+            <li>JavaScript</li>
+            <li>Python</li>
+            <li>HTML/CSS</li>
+            <li>SQL</li>
+        </ul>
+        <p>Изучаю программирование и продолжаю развивать навыки в этих технологиях.</p>
+    </section>
+
+
+    <section class="about">
+        <h2>Обо мне</h2>
+        <p>
+            Я студент III курса Технологического института, изучаю программирование и 
+            активно развиваю навыки в C++, Java, Python и веб-технологиях.
+            Создаю небольшие проекты для практики и планирую пополнять портфолио на GitHub. 
+        </p>
+
+           <p> На данный момент у меня есть 3 года опыта работы в гостиничном бизнесе,
+           что помогло разработать проект по анализу и прогнозированию отмен бронирований.
+        </p>
+    </section>
+
+    <section class="projects">
+        <h2>Проекты</h2>
+        <div class="card">
+            <h3>Анализ отмен бронирований</h3>
+            <p>Проект посвящён анализу факторов отмен бронирований и прогнозированию их вероятности.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Ева Эрглис</p>
+    </footer>
+
+    <script>
+        const sections = document.querySelectorAll('section');
+
+        function checkSections() {
+            const triggerBottom = window.innerHeight / 5 * 4;
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                if (sectionTop < triggerBottom) {
+                    section.classList.add('visible');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', checkSections);
+
+        // запуск один раз при загрузке
+        checkSections();
+    </script>
+
+</body>
+</html>
